@@ -3,10 +3,12 @@ import './TodoItem.css';
 import classNames from 'classnames';
 class TodoItem extends Component {
     render() {
-        const { item } = this.props;
+        const { item, onClick } = this.props;
         return (
             <>
-                <div className ={classNames('TodoItem', {'TodoItem_complete': item.isComplete})}>
+                <div onClick={onClick} className ={classNames('TodoItem', 
+                    {'TodoItem_complete': item.isComplete}
+                )}>
                     <p>{ item.title }</p>
                 </div>
             </>
