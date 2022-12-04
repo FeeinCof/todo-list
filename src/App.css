@@ -117,4 +117,11 @@
 .footer .clear_completed {
   display: flex;
   justify-content: flex-end;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .component_todos {
+    width: 90%;
+  }
 }
