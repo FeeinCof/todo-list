@@ -9,13 +9,10 @@ class App extends Component {
     this.state = {
       inputValue: '',
       renderType: 'all',
-      todoItems: [
-        { title : 'Go Market', isComplete: false },
-        { title : 'Play Football', isComplete: false }
-      ]
+      todoItems: localStorage.reactTodos ? 
+      [...JSON.parse(localStorage.getItem('reactTodos'))] : []
     };
   };
-
   inputOnEntering(event) {
     let { value } = event.target;
     let { todoItems } = this.state;
@@ -74,7 +71,7 @@ class App extends Component {
 
   render() {
     let {inputValue, todoItems, renderType} = this.state;
-   
+    localStorage.setItem("reactTodos", JSON.stringify(todoItems));
     return (
       <div>
         <header className="container">
