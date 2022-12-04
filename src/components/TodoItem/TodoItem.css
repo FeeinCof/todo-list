@@ -1,0 +1,26 @@
+.TodoItem_complete {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+.TodoItem {
+  width: 100%;
+  border-bottom: solid 0.5px #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.TodoItem div {
+    width: 50px;
+    height: 100%;
+    margin-left: 2%;
+}
+.TodoItem div div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 1px #fff;
+}
+.TodoItem .context {
+    flex-grow: 1;
+}

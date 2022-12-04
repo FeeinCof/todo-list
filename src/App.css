@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+*:focus {
+  outline: none !important;
+}
+*::placeholder {
+  color: #e6e6e6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active {
+  border: solid thin #fff;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.finish_all {
+  border-color: #74797e !important;
 }
 
-.App-header {
+.arrow {
+  border: solid #e6e6e6;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.down {
+  transform: rotate(45deg) translateY(-5px);
+  -webkit-transform: rotate(45deg) translateY(-5px);
+}
+
+.container {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.component_todos {
+  width: 550px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 20%), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgb(0 0 0 / 20%), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgb(0 0 0 / 20%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new_todo {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.new_todo div {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_todo {
+  flex-grow: 1;
+  justify-content: flex-start !important;
+}
+
+.input_todo input {
+  width: 100%;
+  border: none;
+  font-size: calc(10px + 2vmin);
+  font-style: italic;
+  text-rendering: auto;
+  color: #74797e;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer div {
+  width: 42%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer .leftbar_footer {
+  flex-grow: 1;
+}
+
+.footer .leftbar_footer span {
+  padding: .1em .3em;
+  margin: 0 .2em;
+}
+
+.footer span:hover {
+  cursor: pointer;
+}
+
+.footer .clear_completed {
+  display: flex;
+  justify-content: flex-end;
 }
