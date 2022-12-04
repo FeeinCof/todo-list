@@ -124,4 +124,10 @@
   .component_todos {
     width: 90%;
   }
+  .footer {
+    font-size: 12px;
+  }
+  .footer div {
+    width: 50%;
+  }
 }
